@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background:linear-gradient(to right,blue,rgb(255, 8, 0));
+}
+
+.main_form{
+    width:50%;
+    background-color: rgb(222, 238, 5);
+   margin: auto;
+   padding: 2%;           
+ 
+  
+    
+}
+.a_name input{
+    padding:.7%;
+    margin:10px;
+   
+}
+#address1{
+    width:90%;
+    padding:.7%;
+    margin:10px;
+    
+}
+.a_address select{
+    width:27%;
+}
+.a_address input{
+   padding:.7%;
+   margin:10px;
+}
+.service_info select{
+    padding:.7%;
+    margin:10px;
+}
+#city{
+    padding: .7%;
+    margin:2px 10px 2px 10px;
+
+}
+#country{
+    padding: .7%;
+    margin:10px;
+}
+.date input{
+    padding: .7%;
+    margin:10px;
+}
+.t_phone input{
+    padding: .7%;
+    margin:2px 80px 0px 2px ;
+}
+.t_phone{
+    display: flex;
+}
+.description textarea{
+    width:90%;
+}
+.buttons button{
+    margin-top: 2%;
+    padding: 1% 10%;
+}
+#label{
+    color:rgb(0, 0, 0);
+}
+.heading1{
+    text-decoration: underline blue;
+}

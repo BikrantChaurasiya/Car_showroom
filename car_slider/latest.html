@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Image Slider</title>
+    <style>
+        /* Basic styling for the slider */
+        .slider-container {
+            display: flex;
+            overflow: hidden;
+            width:100%;
+            background-color: rgb(44, 130, 206);
+            padding: 20px;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+           
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            height: 300px; /* Adjust the height as needed */
+            text-align: center;
+           
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right:20%;
+            width:25px;
+            border-color: black;
+            border-style: solid;
+            border-width: 2px;
+           
+        }
+        .slide img{
+            height:200px;
+            width:377px;
+            
+            
+        }
+        /* Navigation buttons */
+        .nav-btn1 {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 0 10px;
+            float:left;
+            position: absolute;
+            left:0;
+            background-color: rgb(255, 255, 255);
+            padding:10px;
+            border-radius: 100%;
+            text-align: center;
+        }
+        .nav-btn2 {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 0 10px;
+            float:left;
+            position: absolute;
+            right:0;
+            background-color: rgb(255, 255, 255);
+            padding:10px;
+            border-radius: 100%;
+            text-align: center;
+            
+        }
+        .main_button{
+            position: relative;
+            margin-top: -12%;
+            background-color: aliceblue;
+        }
+        .slide_details h5{
+            margin-top:0%;
+            margin-bottom:0%;
+            
+            text-align: left;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="heading"><h2>Latest Cars</h2></div>
+    <div class="slider-container">
+       
+        <div class="slider">
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+            <div class="slide"><img src="/wp9442907-car-showroom-wallpapers.jpg"><div class="slide_details"><h5>car<br>price:$00</h5><button>View details</button></div></div>
+           
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="main_button">
+    <div class="nav-btn1" onclick="prevSlide()">‹</div>
+    <div class="nav-btn2" onclick="nextSlide()">›</div>
+    </div>
+    <script>
+        const slider = document.querySelector('.slider');
+        let currentIndex = 0;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slider.children.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slider.children.length) % slider.children.length;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const translateX = -currentIndex * 100;
+            slider.style.transform = `translateX(${translateX}%)`;
+        }
+    </script>
+</body>
+</html>
