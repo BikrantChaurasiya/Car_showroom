@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Car Dealer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            text-align: left;
+            color: #333;
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 2.5% 15%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin:auto;
+        }
+        .buttons{
+            display:flex;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+      
+    </style>
+</head>
+<body>
+
+
+
+    <!--nav bar-->
+<style>
+    .master-nav ul{
+      display: flex;
+      background:rgb(13, 35, 94);
+      border-radius: 20px;
+    }
+    .master-nav ul li {
+      margin-left:20%;
+      list-style: none;
+      margin: auto;
+      padding:5px 0px;
+      font-size: 20px;
+      
+      
+    }
+    
+    .master-nav ul li a{
+      text-decoration: none;
+      color: white;
+    }
+    .master-nav ul li a:hover{
+      color: rgb(208, 255, 0);
+    
+    }
+    #home{
+    width:25%;
+    margin-right:-10px;
+    background-color: rgb(30, 255, 0);
+    border-radius: 20%;
+    margin: auto;
+    
+    }
+    #search{
+      width:400px;
+      height:40px;
+      border-radius: 5px;
+    }
+    #button{
+      width:70px;
+      height:40px;
+      background-color: #c3f70ac0;
+      color: rgb(255, 255, 255);
+      border-width: .1px;
+      cursor: pointer;
+      border-radius:5px;
+    }
+    #button:active{
+      background-color: rgb(0, 110, 255);
+      transition: 0.1s;
+    }
+    
+      </style>
+    <div class="master-nav">
+      <ul>
+          <li><a href="../p.html"><img src="home.png" id="home"></a></li>
+          <li><a href="../nav-lbuttons/contact/contact.html">Contact us</a></li>
+          <li><a href="../nav-lbuttons/help/help.html">Help</a></li>
+          <li><a href="../card_service/24/24_7.html">Customer-Support</a></li>
+          <li>
+              <div class="search">
+                  <select id="search">
+                      <option selected>Other Srevices</option>
+                      <option>After-Sale Services</option>
+                      <option>Financing</option>
+                      <option>Trade-Ins</option>
+                      <option>Selling Vehicles</option>
+                      <option>Modifications</option>
+                  </select><button id="button">Search</button>
+              </div>
+          </li>
+      </ul>
+    
+    </div>
+    
+    <!--nav bar end-->
+
+    
+    <div class="form-container">
+        <h2 class="form-title">Find a Car Dealer</h2>
+        <form id="carDealerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="form-input" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-input" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" class="form-input" required>
+
+            <label for="location">Preferred Location:</label>
+            <input type="text" id="location" class="form-input" required>
+
+            <label for="budget">Budget (USD):</label>
+            <input type="number" id="budget" class="form-input" required>
+
+            <label for="carType">Preferred Car Type:</label>
+            <select id="carType" class="form-input">
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="hatchback">Hatchback</option>
+            </select>
+            <div class="buttons">
+            <button type="submit" class="form-button">Find Dealer</button>
+        </form>
+        
+            <button onclick="openMap()" class="form-button">
+            <a href="https://www.google.com/maps/search/car+dealers+near+me/@26.1624937,91.7668515,12z?entry=ttu">Open Map</a></button>
+      
+        </div>
+    </div>
+
+    
+
+    <script>
+        function openMap() {
+            // Replace with your map functionality (e.g., Google Maps API)
+            alert('Opening map...');
+        }
+
+        const form = document.getElementById('carDealerForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            // Process form data (e.g., send to server or display results)
+            alert('Form submitted successfully!');
+        });
+    </script>
+
+    
+</body>
+</html>
